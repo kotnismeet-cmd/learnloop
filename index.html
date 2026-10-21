@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LearnLoop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top">
+  <a class="logo" href="#/">🦉 LearnLoop</a>
+  <div class="pills"><span id="streak" class="pill">🔥 0</span><span id="xp" class="pill">⚡ 0 XP</span></div>
+</header>
+<main id="app"></main>
+
+<button id="chatFab" title="Ask the tutor">💬</button>
+<aside id="chatPanel" class="hidden">
+  <div class="chat-head">
+    <b>Tutor</b>
+    <label class="small"><input type="checkbox" id="chatWeb"> search web</label>
+    <button id="chatClose" class="x">✕</button>
+  </div>
+  <div id="chatLog"></div>
+  <form id="chatForm"><input id="chatInput" placeholder="Ask anything about this course…" autocomplete="off"><button>Send</button></form>
+</aside>
+<script src="app.js"></script>
+</body>
+</html>
