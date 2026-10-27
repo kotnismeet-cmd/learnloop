@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: learnit
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --timeout 180
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: DB_PATH
+        value: /var/data/learnit.db
+    disk:
+      name: learnit-data
+      mountPath: /var/data
+      sizeGB: 1
